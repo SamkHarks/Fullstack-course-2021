@@ -6,7 +6,7 @@ const Notification = ({ message }) => {
     return null
   }
   
-  if (message.includes("Information")) {
+  if (message.includes("Information") || message.includes("failed")) {
     return (
       <div className="error">
         {message}
@@ -108,11 +108,18 @@ const App = () => {
             setMessage(`Number changed to ${returnedPerson.number}`)
             setTimeout(()=>setMessage(null),5000)
             setPersons(persons.map(person => person.id !== personId ? person : returnedPerson))
+            setNewName('')
+            setNewNumber('')
           })
           .catch(error => {
-            setMessage(`Information of ${person.name} has already been removed from server`)
-            setTimeout(()=>setMessage(null),5000)
-            setPersons(persons.filter(p => p.id !==personId))
+            console.log(error)
+            if (!error.response) {
+              setMessage(`Information of ${person.name} has already been removed from server`)
+              setPersons(persons.filter(p => p.id !==personId))
+            } else {
+              setMessage(`${error.response.data.error}`)
+            }
+            setTimeout(()=>setMessage(null),8000)
           })
       }
     } else {
@@ -124,6 +131,11 @@ const App = () => {
         setNewNumber('')
         setMessage(`Added ${newPerson.name}`)
         setTimeout(()=>setMessage(null),5000)
+      })
+      .catch(error => {
+        console.log(error.response.data)
+        setMessage(`${error.response.data.error}`)
+        setTimeout(()=>setMessage(null), 8000)
       })
     }
 
