@@ -1,0 +1,49 @@
+POST http://localhost:3003/api/blogs
+content-type: application/json
+
+{
+  "title": "new",
+  "author": "homer",
+  "url": "http://blogger.com",
+  "likes": 2,
+  "userId": "612d3e14d1ffa5425466f16f"
+}
+###
+POST http://localhost:3003/api/blogs
+content-type: application/json
+
+{
+  "title": "newtitle",
+  "author": "lisa",
+  "url": "http://blogger.com",
+  "likes": 1,
+  "userId": "612d3e14d1ffa5425466f16f"
+}
+###
+POST http://localhost:3003/api/blogs
+content-type: application/json
+
+{
+  "title": "nolikes",
+  "author": "defaults to zero",
+  "url": "http://zerozero.com"
+}
+###
+POST http://localhost:3003/api/blogs
+content-type: application/json
+
+{
+  "author": "missing values"
+}
+###
+POST http://localhost:3003/api/blogs
+content-type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QiLCJpZCI6IjYxMmQzZTE0ZDFmZmE1NDI1NDY2ZjE2ZiIsImlhdCI6MTYzMDM2MDQzOH0.fgY-6ulOeer8xRVjcw-aywwKbgmZxGwpFBIp2TZkBGg
+
+{
+  "title": "token3",
+  "author": "homer",
+  "url": "http://bloggg.com",
+  "likes": 1,
+  "userId": "612d3e14d1ffa5425466f16f"
+}
