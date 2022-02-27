@@ -1,1 +1,1 @@
-This repository contains answers to the fullstack course version 2021
+Fullstack course 2021
