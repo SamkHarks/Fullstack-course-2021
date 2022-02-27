@@ -1,0 +1,74 @@
+POST http://localhost:3001/api/patients
+Content-Type: application/json
+
+{
+    "name": "random",
+    "ssn": "101089-123H",
+    "dateOfBirth": "1989-10-01",
+    "occupation": "bad guy",
+    "gender": "male"
+}
+###
+POST http://localhost:3001/api/patients
+Content-Type: application/json
+
+{
+    "ssn": "101089-123H",
+    "dateOfBirth": "1989-10-01",
+    "occupation": "bad guy",
+    "gender": "male"
+}
+###
+POST http://localhost:3001/api/patients
+Content-Type: application/json
+
+{
+    "name": "random",
+    "dateOfBirth": "1989-10-01",
+    "occupation": "bad guy",
+    "gender": "male"
+}
+###
+POST http://localhost:3001/api/patients
+Content-Type: application/json
+
+{
+    "name": "random",
+    "ssn": "101089-123H",
+    "dateOfBirth": "1aaaa",
+    "occupation": "bad guy",
+    "gender": "male"
+}
+###
+POST http://localhost:3001/api/patients
+Content-Type: application/json
+
+{
+    "name": "random",
+    "ssn": "101089-123H",
+    "dateOfBirth": "1989-10-01",
+    "occupation": "bad guy",
+    "gender": "animal"
+}
+###
+POST http://localhost:3001/api/patients
+Content-Type: application/json
+
+{
+    "name": "random",
+    "ssn": "101089-123H",
+    "dateOfBirth": "1989-10-01",
+    "occupation": "bad guy",
+    "gender": "female"
+}
+###
+POST http://localhost:3001/api/patients
+Content-Type: application/json
+
+{
+    "name": "random",
+    "ssn": "1aaaaa",
+    "dateOfBirth": "1989-10-01",
+    "occupation": "bad guy",
+    "gender": "male"
+}

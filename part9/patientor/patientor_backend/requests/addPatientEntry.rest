@@ -1,0 +1,35 @@
+POST http://localhost:3001/api/patients/d2773336-f723-11e9-8f0b-362b9e155667/entries
+Content-Type: application/json
+
+{
+    "type": "Hospital",
+    "description": "Healing time forever",
+    "date": "2022-01-03",
+    "specialist": "Hostel",
+    "dischargeDate": "2066-02-03",
+    "criteria": "Ears start to grow from stomach"
+}
+####
+POST http://localhost:3001/api/patients/d2773336-f723-11e9-8f0b-362b9e155667/entries
+Content-Type: application/json
+
+{
+    "type": "HealthCheck",
+    "description": "Healing time forever",
+    "date": "2022-01-03",
+    "specialist": "Hostel3",
+    "healthCheckRating": "3"
+}
+####
+POST http://localhost:3001/api/patients/d2773336-f723-11e9-8f0b-362b9e155667/entries
+Content-Type: application/json
+
+{
+    "type": "OccupationalHealthcare",
+    "description": "Healing time forever",
+    "date": "2022-01-03",
+    "specialist": "Hostel5",
+    "employerName": "fag",
+    "startDate": "2032-01-03",
+    "endDate": "2042-01-03"
+}
